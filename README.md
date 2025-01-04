@@ -34,3 +34,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## This is my Nextjs template
+
+1. npm install next-auth mongoose mongodb bcrypt clsx
+
+For MUI: npm install @mui/material @emotion/react @emotion/styled
+
+For Stripe: npm install @stripe/stripe-js micro
+
+2. Create a connectToDb function in lib/mongodb.js. You will need to create a new project in Mongodb Atlas to obtain the MongoDb URI link.
+3. The dbName in the mongoose.connect function in mongodb.js will determine the name your database.
+4. Before starting on the Auth, create a user.js model in models folder.
+5. Use sendGrid for sending password reset email. API Key in the setting > API Key > AI Learning Demo (https://app.sendgrid.com/)
