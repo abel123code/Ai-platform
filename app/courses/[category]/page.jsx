@@ -7,7 +7,6 @@ import { Button } from '@/component/ui/Button';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import CourseCard from '@/component/CourseCard';
 import Course from '@/models/Course';
-import { ModuleDataManagementInstance } from 'twilio/lib/rest/marketplace/v1/moduleDataManagement';
 
 export default async function CategoryPage({ params }) {
   const { category } = params;
