@@ -60,7 +60,7 @@ export default async function CourseInfo({ params }) {
   if (hasPurchased) {
     // Redirect to the learning content page
     redirect(`/learn-content/${courseId}`);
-// Replace with your actual learning page route
+    // Replace with your actual learning page route
   }
 
   // Calculate total duration

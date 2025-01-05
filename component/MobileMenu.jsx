@@ -15,11 +15,11 @@ const MobileMenu = ({ session, toggleMobileMenu }) => {
         >
           About us
         </Link>
-        {!session && (<Link href={'/teach-with-us/learn-more'} >
+        {/* {!session && (<Link href={'/teach-with-us/learn-more'} >
           <Button variant="ghost" className="hover:text-blue-500">
             Teach With Us
           </Button>
-        </Link>)}
+        </Link>)} */}
         {session ? (
           <>
             <Link

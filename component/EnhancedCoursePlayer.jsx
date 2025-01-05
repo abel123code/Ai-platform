@@ -126,7 +126,7 @@ export default function EnhancedCoursePlayer({ courseId }) {
               {expandedModules[moduleIndex] && (
                 <ul className="ml-4 md:ml-6 mt-1 md:mt-2 space-y-1 md:space-y-2">
                   {module.lectures.map((lecture, lectureIndex) => (
-                    <li key={lectureIndex}>
+                    <li key={lectureIndex} className='flex flex-col'>
                       <Button
                         variant="ghost"
                         className="w-full justify-start text-sm hover:bg-gray-700 transition-colors"
@@ -134,9 +134,9 @@ export default function EnhancedCoursePlayer({ courseId }) {
                       >
                         <span className="flex items-center">
                           {lecture.completed ? (
-                            <CheckCircle className="h-6 w-6 mr-2 text-green-500" />
+                            <CheckCircle className="h-5 w-5 mr-2 text-green-500 shrink-0" />
                           ) : (
-                            <div className="h-3 w-5 mr-2 rounded-full border border-gray-500" />
+                            <div className="h-4 w-4 mr-2 rounded-full border border-gray-500 shrink-0" />
                           )}
                           {lecture.title}
                         </span>
