@@ -41,7 +41,7 @@ export default function SignInPage() {
       if (res.error) {
         setMessage({ type: 'error', text: res.error });
       } else {
-        setMessage({ type: 'success', text: 'Sign in successful!' });
+        setMessage({ type: 'success', text: 'Sign in successful! Redirecting...' });
         router.push('/home');
       }
     } else if (activeTab === 'verify') {
@@ -118,6 +118,9 @@ export default function SignInPage() {
     if (result?.error) {
       console.error('Sign in error:', result.error);
       setMessage({ type: 'error', text: result.error });
+    } else {
+      setMessage({ type: 'success', text: 'Sign in successful! Redirecting...' });
+      router.push('/home');
     }
     setLoading(false);
   };
