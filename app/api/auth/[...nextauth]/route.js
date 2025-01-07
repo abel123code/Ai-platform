@@ -107,10 +107,10 @@ export const authOptions = {
 
       return false;
     },
-    async redirect({ url, baseUrl }) {
-      // Force the final destination to /home if sign-in was successful.
-      return '/home';
-    },
+    // async redirect({ url, baseUrl }) {
+    //   // Force the final destination to /home if sign-in was successful.
+    //   return '/home';
+    // },
   },
   pages: {
     signIn: 'app/login/page.jsx',
