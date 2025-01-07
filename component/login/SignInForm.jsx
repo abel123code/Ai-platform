@@ -24,9 +24,9 @@ export default function SignInForm({ setMessage }) {
     setMessage({ type: '', text: '' });
 
     const res = await signIn('credentials', {
-      redirect: false,
       email,
       password,
+      callbackUrl: '/home'
     });
 
     if (res.error) {
