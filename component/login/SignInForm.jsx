@@ -44,12 +44,13 @@ export default function SignInForm({ setMessage }) {
     setGoogleLoading(true);
     setMessage({ type: '', text: '' });
 
-    const result = await signIn('google');
+    const result = await signIn('google', {
+        callbackUrl: '/home',
+    });
     if (result?.error) {
       setMessage({ type: 'error', text: result.error });
     } else {
       setMessage({ type: 'success', text: 'Sign in successful! Redirecting...' });
-      router.push('/home');
     }
 
     setGoogleLoading(false);
