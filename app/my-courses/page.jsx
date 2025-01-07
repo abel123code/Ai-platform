@@ -1,5 +1,3 @@
-// app/my-courses/page.js
-
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 import { connectToDB } from '@/lib/mongodb';
@@ -32,7 +30,7 @@ export default async function MyCoursesPage() {
     const session = await getServerSession(authOptions);
 
     if (!session) {
-        redirect('/api/auth/signin');
+        redirect('/login');
     }
 
     // Connect to the database
