@@ -4,13 +4,12 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import Course from '@/models/Course';
 import { connectToDB } from '@/lib/mongodb';
-import CourseInfo from '@/app/course/[id]/page';
 
 export async function POST(request) {
   const session = await getServerSession(authOptions);
 
   if (!session) {
-    return NextResponse.redirect('/api/auth/signin');
+    return NextResponse.redirect('/login');
   }
 
   const { courseId } = await request.json();
