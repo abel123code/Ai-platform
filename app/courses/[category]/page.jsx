@@ -40,11 +40,11 @@ export default async function CategoryPage({ params }) {
     'personal-development': 'Personal Development',
     design: 'Design',
     marketing: 'Marketing',
-    lifestyle: 'Lifestyle',
+    // lifestyle: 'Lifestyle',
     'photography-video': 'Photography & Video',
     'health-fitness': 'Health & Fitness',
-    music: 'Music',
-    'teaching-academics': 'Teaching & Academics',
+    // music: 'Music',
+    // 'teaching-academics': 'Teaching & Academics',
   };
 
   const categoryName = categoryNameMap[category] || 'Courses';
